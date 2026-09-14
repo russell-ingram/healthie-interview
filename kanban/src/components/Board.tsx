@@ -11,6 +11,7 @@ import {
   type DragStartEvent,
   type Over,
 } from '@dnd-kit/core'
+import confetti from 'canvas-confetti'
 import { useState } from 'react'
 import { COLUMNS } from '../constants/columns'
 import type { Item, ItemId, ItemStatus } from '../types/item'
@@ -42,6 +43,11 @@ export function Board({ items, onStatusChange, onReorder }: BoardProps) {
 
   function handleDragEnd({ active, over }: DragEndEvent) {
     if (over) onReorder(String(active.id), String(over.id))
+
+    const wasDone = draggedItem?.status === 'done'
+    const isDone = statusOf(active) === 'done'
+    if (isDone && !wasDone) confetti()
+
     setDraggedItem(null)
   }
 

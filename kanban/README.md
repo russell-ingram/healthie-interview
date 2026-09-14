@@ -29,4 +29,5 @@ public Rick and Morty API.
 - **Vite + React 19 + TypeScript**
 - **Tailwind CSS v4** - basic styling for a quick build
 - **dnd-kit** (`core` + `sortable`) - drag and drop between and within columns
+- **canvas-confetti** - celebration when a card moves to Done
 - **Vitest** - unit tests for item updates
