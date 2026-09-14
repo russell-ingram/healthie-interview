@@ -1,4 +1,4 @@
-import type { Item } from '../types/board'
+import type { Item } from '../types/item'
 
 type CardViewProps = {
   item: Item

@@ -1,9 +1,7 @@
-export const COLUMN_IDS = ['todo', 'doing', 'done'] as const
+import type { ItemStatus } from '../types/item'
 
-export type ColumnId = (typeof COLUMN_IDS)[number]
-
-export const COLUMN_TITLES: Record<ColumnId, string> = {
-  todo: 'To Do',
-  doing: 'Doing',
-  done: 'Done',
-}
+export const COLUMNS: { status: ItemStatus; title: string }[] = [
+  { status: 'todo', title: 'To Do' },
+  { status: 'doing', title: 'Doing' },
+  { status: 'done', title: 'Done' },
+]

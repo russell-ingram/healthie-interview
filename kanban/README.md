@@ -21,9 +21,12 @@ public Rick and Morty API.
 | `npm run build`                   | Type-check, then production build to `dist/` |
 | `npm run typecheck`               | TypeScript only, no build                    |
 | `npm run lint`                    | Oxlint                                       |
+| `npm test` / `npm run test:watch` | Vitest                                       |
 | `npm run format` / `format:check` | Prettier                                     |
 
 ## Stack
 
 - **Vite + React 19 + TypeScript**
 - **Tailwind CSS v4** - basic styling for a quick build
+- **dnd-kit** (`core` + `sortable`) - drag and drop between and within columns
+- **Vitest** - unit tests for item updates

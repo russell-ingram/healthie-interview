@@ -1,4 +1,4 @@
-import type { ColumnId } from '../constants/columns'
+export type ItemStatus = 'todo' | 'doing' | 'done'
 
 /** The slice of a Rick and Morty character a card needs to render. */
 export type CharacterSummary = {
@@ -13,10 +13,5 @@ export type Item = {
   id: ItemId
   title: string
   character: CharacterSummary
-}
-
-export type BoardState = {
-  items: Record<ItemId, Item>
-  /** Card order within each column, top to bottom. */
-  columns: Record<ColumnId, ItemId[]>
+  status: ItemStatus
 }
