@@ -4,8 +4,10 @@ Two independent projects in one repo.
 
 | Folder | What it is |
 | --- | --- |
-| `rails-api/` | Rails data model: providers, clients, per-relationship plans, journal entries |
-| `kanban/` | React + TypeScript Kanban board backed by the Rick and Morty GraphQL API |
+| [`rails-api/`](rails-api/) | Rails data model: providers, clients, per-relationship plans, journal entries |
+| [`kanban/`](kanban/) | React + TypeScript Kanban board backed by the Rick and Morty GraphQL API |
+
+Each folder has its own README covering setup and stack choices.
 
 ---
 
@@ -24,26 +26,22 @@ bin/rails db:seed
 bin/rails console
 ```
 
-Schema overview, model relationships, and the four required queries: _TODO — fill in once the models exist._
-
-The required ActiveRecord queries live in `rails-api/QUERIES.md` (or `db/seeds.rb` / a rake task — decide and update this line).
+Schema overview, model relationships, and the four required queries: _TODO._
 
 ---
 
 ## kanban
 
-**Requirements:** Node 20+.
+**Requirements:** Node 20.19+ or 22.12+.
 
 ```bash
 cd kanban
 npm install
-npm run dev
+npm start
 ```
 
-Opens on http://localhost:5173. No auth or API keys needed — it calls the public
-Rick and Morty GraphQL API at https://rickandmortyapi.com/graphql.
-
-Component structure and library choices: _TODO — fill in once built._
+Opens on http://localhost:5173. Scripts, stack choices, and component structure are in
+[`kanban/README.md`](kanban/README.md).
 
 ---
 
