@@ -1,11 +1,6 @@
-export type ItemStatus = 'todo' | 'doing' | 'done'
+import type { CharacterSummary } from './character'
 
-/** The slice of a Rick and Morty character a card needs to render. */
-export type CharacterSummary = {
-  id: string
-  name: string
-  image: string
-}
+export type ItemStatus = 'todo' | 'doing' | 'done'
 
 export type ItemId = string
 

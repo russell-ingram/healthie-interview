@@ -1,4 +1,5 @@
-import type { CharacterSummary, Item } from '../types/item'
+import type { CharacterSummary } from '../types/character'
+import type { Item } from '../types/item'
 
 const avatar = (id: number) =>
   `https://rickandmortyapi.com/api/character/avatar/${id}.jpeg`
@@ -19,7 +20,7 @@ const summer: CharacterSummary = {
   image: avatar(3),
 }
 
-/** Hardcoded items used until cards can be created through the form. */
+/** Starter items so the board isn't empty on first load. */
 export const sampleItems: Item[] = [
   { id: 'item-1', title: 'Fix portal gun', character: rick, status: 'todo' },
   { id: 'item-2', title: 'Pass math class', character: morty, status: 'todo' },

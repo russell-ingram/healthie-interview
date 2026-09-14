@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { sampleItems } from '../fixtures/sampleItems'
+import type { CharacterSummary } from '../types/character'
 import type { Item, ItemId, ItemStatus } from '../types/item'
 
 /**
@@ -11,11 +12,24 @@ export function useItems() {
 
   return {
     items,
+    addItem: (title: string, character: CharacterSummary) =>
+      setItems((current) => addItem(current, title, character)),
     setItemStatus: (itemId: ItemId, status: ItemStatus) =>
       setItems((current) => setItemStatus(current, itemId, status)),
     reorderItem: (itemId: ItemId, targetId: ItemId) =>
       setItems((current) => reorderItem(current, itemId, targetId)),
   }
+}
+
+export function addItem(
+  items: Item[],
+  title: string,
+  character: CharacterSummary,
+): Item[] {
+  return [
+    ...items,
+    { id: crypto.randomUUID(), title, character, status: 'todo' },
+  ]
 }
 
 export function setItemStatus(

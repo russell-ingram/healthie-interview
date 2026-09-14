@@ -1,11 +1,36 @@
 import { describe, expect, it } from 'vitest'
 import { sampleItems } from '../fixtures/sampleItems'
-import { reorderItem, setItemStatus } from './useItems'
+import { addItem, reorderItem, setItemStatus } from './useItems'
 
 // sampleItems, in order:
 //   item-1 todo, item-2 todo, item-3 doing, item-4 done
 
 const ids = (items: { id: string }[]) => items.map((item) => item.id)
+
+describe('addItem', () => {
+  const character = { id: '5', name: 'Jerry Smith', image: 'jerry.jpeg' }
+
+  it('adds a new to-do item to the end of the list', () => {
+    const items = addItem(sampleItems, 'Find a job', character)
+
+    expect(items).toHaveLength(sampleItems.length + 1)
+    expect(items.at(-1)).toMatchObject({
+      title: 'Find a job',
+      character,
+      status: 'todo',
+    })
+  })
+
+  it('gives each new item a unique id', () => {
+    const items = addItem(
+      addItem(sampleItems, 'First', character),
+      'Second',
+      character,
+    )
+
+    expect(new Set(ids(items)).size).toBe(items.length)
+  })
+})
 
 describe('setItemStatus', () => {
   it('changes only that item’s status', () => {
