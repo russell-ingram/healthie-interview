@@ -32,3 +32,25 @@ public Rick and Morty API.
 - **Headless UI** - character typeahead (`Combobox`)
 - **canvas-confetti** - celebration when a card moves to Done
 - **Vitest** - unit tests for item updates
+
+## Structure
+
+```
+src/
+├─ api/         Rick and Morty GraphQL request
+├─ components/  Board, Column, cards, new item form, character picker
+├─ constants/   Column definitions
+├─ fixtures/    Starter items
+├─ hooks/       useItems (in-memory item list), useCharacterSearch
+└─ types/       Item and character types
+```
+
+## Notes and known gaps
+
+- The board starts with a few sample items for quick testing, rather than an empty state.
+- Items live in memory, so a refresh resets the board. `useItems` is where persistence
+  would go.
+- No editing or deleting items.
+- Drag and drop is mouse-only; keyboard and touch dragging aren't supported.
+- Character search shows the first page of matches (20), with no "load more".
+- Tests cover the item update logic only; there are no component tests.
