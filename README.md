@@ -13,7 +13,7 @@ Each folder has its own README covering setup and stack choices.
 
 ## rails-api
 
-**Requirements:** Ruby 3.4.x and Rails 8.1.x. SQLite ships with macOS.
+**Requirements:** Ruby 3.4.x. SQLite ships with macOS.
 
 > Ruby 4.0 is not supported by Rails 8.1 — install Homebrew's `ruby@3.4` formula, not the
 > default `ruby` formula, which now points at 4.0.
@@ -21,12 +21,12 @@ Each folder has its own README covering setup and stack choices.
 ```bash
 cd rails-api
 bundle install
-bin/rails db:migrate
-bin/rails db:seed
+bin/rails db:prepare
 bin/rails console
 ```
 
-Schema overview, model relationships, and the four required queries: _TODO._
+Commands, stack choices, and the data model are in
+[`rails-api/README.md`](rails-api/README.md).
 
 ---
 
