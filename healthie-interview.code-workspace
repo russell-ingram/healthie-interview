@@ -1,0 +1,25 @@
+{
+  "folders": [
+    { "name": "root", "path": "." },
+    { "name": "rails-api", "path": "rails-api" },
+    { "name": "kanban", "path": "kanban" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "rails-api": true,
+      "kanban": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/tmp": true,
+      "**/log": true
+    },
+    "editor.formatOnSave": true,
+    "[ruby]": {
+      "editor.defaultFormatter": "Shopify.ruby-lsp",
+      "editor.tabSize": 2
+    },
+    "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
+  }
+}

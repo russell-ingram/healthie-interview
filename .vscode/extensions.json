@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "Shopify.ruby-lsp",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "GraphQL.vscode-graphql-syntax",
+    "usernamehw.errorlens",
+    "eamodio.gitlens"
+  ]
+}

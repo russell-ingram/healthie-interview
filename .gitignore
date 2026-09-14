@@ -1,0 +1,42 @@
+# --- Private: never for the interviewers' eyes ---
+# Prep notes, the confidential interview guide, and anything else local-only.
+# Put new private material in private/ or name it *.private.* and it stays out.
+HANDOFF.md
+docs/
+private/
+*.private.*
+notes/
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+**/config/master.key
+**/config/credentials/*.key
+
+# --- OS / editor ---
+.DS_Store
+*.swp
+.idea/
+
+# --- Rails ---
+rails-api/log/*
+rails-api/tmp/*
+rails-api/storage/*
+rails-api/db/*.sqlite3
+rails-api/db/*.sqlite3-*
+rails-api/.bundle
+rails-api/vendor/bundle
+
+# --- Node / React ---
+node_modules/
+kanban/dist/
+kanban/.vite/
+kanban/*.local
+npm-debug.log*
+yarn-error.log*
