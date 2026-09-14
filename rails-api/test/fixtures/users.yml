@@ -1,0 +1,19 @@
+dana:
+  type: Provider
+  name: Dana Reyes
+  email: dana@example.com
+
+marcus:
+  type: Provider
+  name: Marcus Hill
+  email: marcus@example.com
+
+alex:
+  type: Client
+  name: Alex Chen
+  email: alex@example.com
+
+jordan:
+  type: Client
+  name: Jordan Park
+  email: jordan@example.com
