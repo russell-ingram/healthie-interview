@@ -25,7 +25,7 @@ bin/rails db:prepare
 bin/rails console
 ```
 
-Commands, stack choices, and the data model are in
+Commands, stack choices, the data model, and the four queries are in
 [`rails-api/README.md`](rails-api/README.md).
 
 ---
@@ -47,4 +47,6 @@ Opens on http://localhost:5173. Scripts, stack choices, and component structure 
 
 ## Notes / known gaps
 
-_TODO — anything left incomplete goes here so we can talk about it in the session._
+Each project lists what's incomplete at the end of its own README:
+[`rails-api`](rails-api/README.md#notes-and-known-gaps) and
+[`kanban`](kanban/README.md#notes-and-known-gaps).
