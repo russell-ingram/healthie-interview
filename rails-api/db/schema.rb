@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_09_14_235433) do
+ActiveRecord::Schema[8.1].define(version: 2026_09_15_000134) do
   create_table "enrollments", force: :cascade do |t|
     t.integer "client_id", null: false
     t.datetime "created_at", null: false
@@ -20,6 +20,14 @@ ActiveRecord::Schema[8.1].define(version: 2026_09_14_235433) do
     t.index ["client_id"], name: "index_enrollments_on_client_id"
     t.index ["provider_id", "client_id"], name: "index_enrollments_on_provider_id_and_client_id", unique: true
     t.check_constraint "plan IN ('basic', 'premium')", name: "enrollments_plan_check"
+  end
+
+  create_table "journal_entries", force: :cascade do |t|
+    t.text "body", null: false
+    t.integer "client_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id", "created_at"], name: "index_journal_entries_on_client_id_and_created_at"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,4 +41,5 @@ ActiveRecord::Schema[8.1].define(version: 2026_09_14_235433) do
 
   add_foreign_key "enrollments", "users", column: "client_id"
   add_foreign_key "enrollments", "users", column: "provider_id"
+  add_foreign_key "journal_entries", "users", column: "client_id"
 end

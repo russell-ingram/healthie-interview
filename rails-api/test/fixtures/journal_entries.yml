@@ -1,0 +1,19 @@
+alex_breakfast:
+  client: alex
+  body: Oatmeal with berries. Felt full until lunch.
+  created_at: <%= 3.days.ago %>
+
+alex_walk:
+  client: alex
+  body: Thirty minute walk after dinner.
+  created_at: <%= 1.day.ago %>
+
+alex_sleep:
+  client: alex
+  body: Slept badly, skipped the afternoon snack.
+  created_at: <%= 2.days.ago %>
+
+jordan_water:
+  client: jordan
+  body: Hit my water goal three days running.
+  created_at: <%= 4.days.ago %>
